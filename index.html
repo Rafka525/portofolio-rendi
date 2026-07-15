@@ -66,7 +66,7 @@
         id="password"
         name="password"
         required
-        placeholder="Isi Passwordnya Juga"
+        placeholder="Masukkan Flibbertigibbet"
       /><br /><br />
       <input type="submit" value="Submit" />
     </form>
@@ -78,6 +78,7 @@
 
           const username = document.getElementById("username").value.trim();
           const password = document.getElementById("password").value.trim();
+          const correctPassword = "flibbertigibbet";
 
           if (username.length < 3) {
             alert("Username minimal 3 karakter!");
@@ -86,6 +87,11 @@
 
           if (password.length < 6) {
             alert("Password minimal 6 karakter!");
+            return;
+          }
+
+          if (password.toLowerCase() !== correctPassword) {
+            alert("Password salah! Password harus 'Flibbertigibbet'");
             return;
           }
 
